@@ -1,0 +1,83 @@
+-- 1 Criar um comando SELECT que retorne APENAS o nome dos clientes da cidade “TUPA”. Utilizar o EXISTS para realizar a condição. 
+SELECT 
+        C.Nome_Cliente,
+		CI.Nome_Cidade
+FROM
+        dbo.Clientes C
+INNER   JOIN
+        dbo.Cidades CI
+ON     
+        CI.Codigo_Cidade  =
+        C.Codigo_Cidade
+WHERE   
+        EXISTS (
+        SELECT 1
+		FROM   dbo.Cidades CI
+		WHERE  CI.Codigo_Cidade  =  
+		       C.Codigo_Cidade
+		AND    CI.Nome_Cidade    = 
+		       'Tupã'
+);
+
+-- 2 Criar um comando SELECT que retorne o nome do cliente e o nome da cidade de todos os registros.
+SELECT	
+        C.Nome_Cliente, 
+        CI.Nome_Cidade 
+FROM    
+        dbo.Clientes C
+INNER JOIN 
+        dbo.Cidades CI  
+ON      CI.Codigo_Cidade = C.Codigo_Cidade;
+
+-- 3 Criar um comando SELECT que retorne TODOS os nomes e os códigos dos clientes ordenados por nome do cliente. 
+SELECT	
+        Codigo_Cliente, 
+        Nome_Cliente	
+FROM	
+        dbo.Clientes
+ORDER	BY	
+        Nome_Cliente ASC;
+
+-- 4 Criar um comando DELETE que exclua clientes com código do cliente entre a numeração 100 e 200.
+DELETE	FROM	
+        dbo.Clientes
+WHERE	
+        Codigo_Cliente > 100	
+AND	    Codigo_Cliente > 200;
+
+-- 5 Criar um comando UPDATE que altere o estado de todas as cidades para o estado “SP” quando estiverem com estado igual a “PR”. 
+UPDATE	
+        dbo.Cidades
+SET		
+        Estado_UF_Cidade = 'SP'
+WHERE	
+        Estado_UF_Cidade = 'PR';
+
+-- 6 Criar um comando INSERT na tabela de clientes de um registro qualquer com todos os campos da tabela. (valores livres)  
+IF      EXISTS   (SELECT  1  FROM  dbo.Cidades  WHERE  Codigo_Cidade  =  1)
+  BEGIN
+     INSERT  INTO   dbo.Clientes	
+             (CGC_CPF_Cliente, 
+              Nome_Cliente, 
+              Telefone_Cliente, 
+              Endereco_Cliente, 
+              Bairro_Cliente, 
+              Complemento_Cliente,
+              CEP_Cliente,
+              Email_Cliente, 
+              Codigo_Cidade) 
+     VALUES	('48972007846',
+              'Cleiton',
+              '14998579399',
+              'Laurindo Antonio',
+              'Centro',
+              'CASA',
+              '17590032',
+              'cleitungr66@gmail.com',
+              '1');
+  END
+  ELSE
+  BEGIN
+  	PRINT  'ERRO: A cidade informada não existe na tabela';
+  END
+

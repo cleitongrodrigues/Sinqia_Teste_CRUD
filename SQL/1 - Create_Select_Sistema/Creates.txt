@@ -1,0 +1,39 @@
+CREATE	DATABASE	SINQIA_CRUD;
+USE			SINQIA_CRUD;
+
+IF	OBJECT_ID	('dbo.Cidades')	IS	NULL
+    BEGIN
+        CREATE	TABLE	dbo.Cidades(
+            Codigo_Cidade       INTEGER			IDENTITY	PRIMARY		KEY	        NOT	    NULL,
+            Nome_Cidade         VARCHAR(50)		COLLATE		Latin1_General_CI_AS	NOT 	NULL,
+            Estado_UF_Cidade    CHAR(2)			COLLATE		Latin1_General_CI_AS	NOT	    NULL,
+            Cep_Inicial_Cidade  VARCHAR(8)		COLLATE		Latin1_General_CI_AS	NOT	    NULL,
+            Cep_Final_Cidade    VARCHAR(8)		COLLATE		Latin1_General_CI_AS	NOT 	NULL
+		);
+   END
+   ELSE
+   BEGIN
+     PRINT 'Tabela ja criada no banco'
+   END
+
+IF	OBJECT_ID	('dbo.Clientes')	IS	NULL
+	BEGIN
+		CREATE	TABLE	dbo.Clientes(
+			Codigo_Cliente		INTEGER			IDENTITY	PRIMARY		KEY	            NOT	NULL,
+			CGC_CPF_Cliente		VARCHAR(14)		COLLATE		Latin1_General_CI_AS	    NOT	NULL,
+			Nome_Cliente		VARCHAR(100)	COLLATE		Latin1_General_CI_AS	    NOT	NULL,
+			Telefone_Cliente	VARCHAR(11)		COLLATE		Latin1_General_CI_AS,
+			Endereco_Cliente	VARCHAR(100)	COLLATE		Latin1_General_CI_AS	    NOT	NULL,
+			Bairro_Cliente		VARCHAR(50)		COLLATE		Latin1_General_CI_AS	    NOT	NULL,
+			Complemento_Cliente	VARCHAR(20)		COLLATE		Latin1_General_CI_AS,
+			CEP_Cliente         VARCHAR(8)      COLLATE		Latin1_General_CI_AS	    NOT	NULL,
+			Email_Cliente		VARCHAR(50)		COLLATE		Latin1_General_CI_AS	    NOT	NULL,
+			Codigo_Cidade		INTEGER								                    NOT	NULL,
+			CONSTRAINT          FK_Cod_Cidade   FOREIGN		KEY	(Codigo_Cidade)	
+			REFERENCES          dbo.Cidades                     (Codigo_Cidade)
+		);
+	END
+    ELSE
+    BEGIN
+     PRINT 'Tabela ja criada no banco'
+    END

@@ -1,0 +1,88 @@
+-- 7 Criar uma view para consultar os registros contidos na tabela CIDADES.
+CREATE   VIEW   Consulta_Cidades_View   AS
+    SELECT	
+            Codigo_Cidade, 
+            Nome_Cidade, 
+            Estado_UF_Cidade, 
+            Cep_Inicial_Cidade, 
+            Cep_Final_Cidade
+    FROM	
+            dbo.Cidades;
+
+SELECT   *   FROM   Consulta_Cidades_View;
+
+-- 8 Criar um procedimento armazenado (procedure) para realizar as operações de INSERT, UPDATE E 
+-- DELETE na tabela de CIDADES. Criar uma procedure única que faça todas as operações. 
+-- Ela pode ser usada no aplicativo criado, se desejar.
+
+CREATE    PROCEDURE    Gerencia_Cidades_Procedure
+    @Acao CHAR(1),  -- ('I' = Insert, 'U' = Update, 'D' = Delete)
+    @Codigo_Cidade INT,
+    @Nome_Cidade NVARCHAR(100),
+    @Estado_UF_Cidade CHAR(2),
+    @Cep_Inicial_Cidade VARCHAR(10),
+    @Cep_Final_Cidade VARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Inserir uma nova cidade
+    IF @Acao = 'I'
+    BEGIN
+        INSERT INTO dbo.Cidades 
+		(Nome_Cidade, 
+		 Estado_UF_Cidade, 
+		 Cep_Inicial_Cidade, 
+		 Cep_Final_Cidade)
+        VALUES 
+		(@Nome_Cidade, 
+		 @Estado_UF_Cidade, 
+		 @Cep_Inicial_Cidade, 
+		 @Cep_Final_Cidade);
+
+        PRINT 'Cidade inserida com sucesso!';
+    END
+
+    -- Atualizar uma cidade existente
+    ELSE IF @Acao = 'U'
+    BEGIN
+        IF EXISTS (SELECT 1 FROM dbo.Cidades WHERE Codigo_Cidade = @Codigo_Cidade)
+        BEGIN
+            UPDATE dbo.Cidades
+            SET Nome_Cidade = @Nome_Cidade,
+                Estado_UF_Cidade = @Estado_UF_Cidade,
+                Cep_Inicial_Cidade = @Cep_Inicial_Cidade,
+                Cep_Final_Cidade = @Cep_Final_Cidade
+            WHERE Codigo_Cidade = @Codigo_Cidade;
+
+            PRINT 'Cidade atualizada com sucesso!';
+        END
+        ELSE
+        BEGIN
+            PRINT 'Erro: Código da cidade não encontrado.';
+        END
+    END
+
+    -- Excluir uma cidade
+    ELSE IF @Acao = 'D'
+    BEGIN
+        IF EXISTS (SELECT 1 FROM dbo.Cidades WHERE Codigo_Cidade = @Codigo_Cidade)
+        BEGIN
+            DELETE FROM dbo.Cidades WHERE Codigo_Cidade = @Codigo_Cidade;
+
+            PRINT 'Cidade excluída com sucesso!';
+        END
+        ELSE
+        BEGIN
+            PRINT 'Erro: Código da cidade não encontrado.';
+        END
+    END
+
+    -- Ação inválida
+    ELSE
+    BEGIN
+        PRINT 'Erro: Ação inválida. Use "I" para Insert, "U" para Update ou "D" para Delete.';
+    END
+END;
+
+EXEC Gerencia_Cidades_Procedure 'I', NULL, 'Queiroz', 'SP', '17590-000', '17590-099';
