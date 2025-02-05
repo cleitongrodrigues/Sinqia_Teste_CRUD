@@ -181,7 +181,7 @@ object frmRelClientesCidades: TfrmRelClientesCidades
       Top = 66
       Width = 145
       Height = 24
-      TabOrder = 0
+      TabOrder = 1
       OnKeyPress = edtCodigoCidadeFinalKeyPress
     end
     object edtCodigoCidadeInicial: TEdit
@@ -189,7 +189,7 @@ object frmRelClientesCidades: TfrmRelClientesCidades
       Top = 35
       Width = 145
       Height = 24
-      TabOrder = 1
+      TabOrder = 0
       OnKeyPress = edtCodigoCidadeInicialKeyPress
     end
   end
@@ -252,7 +252,7 @@ object frmRelClientesCidades: TfrmRelClientesCidades
       Top = 79
       Width = 145
       Height = 24
-      TabOrder = 0
+      TabOrder = 1
       OnKeyPress = edtCodigoClienteFinalKeyPress
     end
     object edtCodigoClienteInicial: TEdit
@@ -260,7 +260,7 @@ object frmRelClientesCidades: TfrmRelClientesCidades
       Top = 41
       Width = 145
       Height = 24
-      TabOrder = 1
+      TabOrder = 0
       OnKeyPress = edtCodigoClienteInicialKeyPress
     end
   end

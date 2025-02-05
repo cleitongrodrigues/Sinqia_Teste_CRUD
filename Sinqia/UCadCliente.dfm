@@ -215,7 +215,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 3
   end
   object edtEndereco: TDBEdit
     Left = 16
@@ -230,7 +230,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 4
   end
   object edtBairro: TDBEdit
     Left = 322
@@ -245,7 +245,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 5
   end
   object edtComplemento: TDBEdit
     Left = 16
@@ -260,10 +260,10 @@ object frmCadClientes: TfrmCadClientes
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 7
   end
   object edtCep: TDBEdit
-    Left = 615
+    Left = 614
     Top = 128
     Width = 220
     Height = 31
@@ -291,7 +291,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 8
   end
   object edtCidade: TDBEdit
     Left = 617
@@ -309,7 +309,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Style = [fsBold]
     ParentFont = False
     ReadOnly = True
-    TabOrder = 8
+    TabOrder = 9
   end
   object btnNovo: TBitBtn
     Left = 16
@@ -435,7 +435,7 @@ object frmCadClientes: TfrmCadClientes
       9E9EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 9
+    TabOrder = 10
     OnClick = btnNovoClick
   end
   object btnEditar: TBitBtn
@@ -562,7 +562,7 @@ object frmCadClientes: TfrmCadClientes
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 10
+    TabOrder = 11
     OnClick = btnEditarClick
   end
   object btnExcluir: TBitBtn
@@ -689,7 +689,7 @@ object frmCadClientes: TfrmCadClientes
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 11
+    TabOrder = 12
     OnClick = btnExcluirClick
   end
   object btnSalvar: TBitBtn
@@ -816,7 +816,7 @@ object frmCadClientes: TfrmCadClientes
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 12
+    TabOrder = 13
     OnClick = btnSalvarClick
   end
   object btnCancelar: TBitBtn
@@ -943,7 +943,7 @@ object frmCadClientes: TfrmCadClientes
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 13
+    TabOrder = 14
     OnClick = btnCancelarClick
   end
   object btnConsulta: TBitBtn
@@ -1070,7 +1070,7 @@ object frmCadClientes: TfrmCadClientes
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 14
+    TabOrder = 15
     OnClick = btnConsultaClick
   end
   object btnPesqCIdade: TBitBtn
@@ -1197,7 +1197,7 @@ object frmCadClientes: TfrmCadClientes
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 15
+    TabOrder = 16
     OnClick = btnPesqCIdadeClick
   end
   object edtNomeCidade: TDBEdit
@@ -1214,7 +1214,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 16
+    TabOrder = 17
   end
   object pnlCpfCnpj: TPanel
     Left = 424
@@ -1227,7 +1227,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 17
+    TabOrder = 18
     object rbtCpf: TRadioButton
       Left = 16
       Top = 8
@@ -1262,7 +1262,7 @@ object frmCadClientes: TfrmCadClientes
     Font.Style = [fsBold]
     MaxLength = 14
     ParentFont = False
-    TabOrder = 18
+    TabOrder = 2
     Text = ''
     OnChange = mkCpfCnpjChange
     OnKeyPress = mkCpfCnpjKeyPress
