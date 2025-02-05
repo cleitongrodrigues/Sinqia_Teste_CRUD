@@ -64,7 +64,6 @@ type
     procedure rbtCnpjClick(Sender: TObject);
     procedure mkCpfCnpjChange(Sender: TObject);
     procedure mkCpfCnpjKeyPress(Sender: TObject; var Key: Char);
-    procedure cbCpfCnpjChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -102,7 +101,6 @@ end;
 
 procedure TfrmCadClientes.btnEditarClick(Sender: TObject);
 begin
-  cbCpfCnpj.Enabled := True;
   DM.qryCadClientes.Edit;
 //  mkCpfCnpj.Text := edtCgcCPF.Text;
   mkCpfCnpj.ReadOnly := False;
@@ -120,7 +118,6 @@ end;
 
 procedure TfrmCadClientes.btnNovoClick(Sender: TObject);
 begin
-  cbCpfCnpj.Enabled := True;
   mkCpfCnpj.ReadOnly := False;
 //  mkCpfCnpj.Clear;
 //  rbtCpf.Checked;
@@ -205,6 +202,7 @@ begin
         frmCadCidade.Show;
         Exit;
       end;
+      Exit;
     end;
   end;
     DM.qryCadClientes.Post;
@@ -214,28 +212,6 @@ end;
 procedure TfrmCadClientes.btnUltimoClick(Sender: TObject);
 begin
   DM.qryCadCidades.Last;
-end;
-
-procedure TfrmCadClientes.cbCpfCnpjChange(Sender: TObject);
-begin
-  if cbCpfCnpj.ItemIndex = 0 then
-  begin
-    mkCpfCnpj.Enabled := False;
-    mkCpfCnpj.Text := '';
-  end
-  else if cbCpfCnpj.ItemIndex = 1 then
-  begin
-    mkCpfCnpj.Enabled := True;
-    mkCpfCnpj.EditMask := '999.999.999-99;1;_';
-  end
-  else if cbCpfCnpj.ItemIndex = 2 then
-  begin
-    mkCpfCnpj.Enabled := True;
-    mkCpfCnpj.EditMask := '99.999.999/9999-99;1;_';
-  end;
-
-  mkCpfCnpj.Text := '';
-
 end;
 
 procedure TfrmCadClientes.dsCadClienteStateChange(Sender: TObject);
