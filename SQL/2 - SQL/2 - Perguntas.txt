@@ -43,7 +43,8 @@ DELETE	FROM
         dbo.Clientes
 WHERE	
         Codigo_Cliente > 100	
-AND	    Codigo_Cliente > 200;
+AND	    
+        Codigo_Cliente > 200;
 
 -- 5 Criar um comando UPDATE que altere o estado de todas as cidades para o estado “SP” quando estiverem com estado igual a “PR”. 
 UPDATE	
