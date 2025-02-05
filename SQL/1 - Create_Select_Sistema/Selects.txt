@@ -1,4 +1,22 @@
-SELECT	Codigo_Cidade, Nome_Cidade, Estado_UF_Cidade, Cep_Inicial_Cidade, Cep_Final_Cidade	FROM	dbo.Cidades;
+SELECT	
+    Codigo_Cidade, 
+    Nome_Cidade, 
+    Estado_UF_Cidade, 
+    Cep_Inicial_Cidade, 
+    Cep_Final_Cidade	
+FROM	
+    dbo.Cidades;
 
-SELECT	Codigo_Cliente, CGC_CPF_Cliente, Nome_Cliente, Telefone_Cliente, Endereco_Cliente, Bairro_Cliente, 
-Complemento_Cliente, CEP_Cliente, Email_Cliente, Codigo_Cidade	FROM	dbo.Clientes;
+SELECT	
+    Codigo_Cliente, 
+    CGC_CPF_Cliente, 
+    Nome_Cliente, 
+    Telefone_Cliente, 
+    Endereco_Cliente, 
+    Bairro_Cliente, 
+    Complemento_Cliente, 
+    CEP_Cliente, 
+    Email_Cliente, 
+    Codigo_Cidade	
+FROM	
+    dbo.Clientes;

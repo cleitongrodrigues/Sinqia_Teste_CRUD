@@ -1,0 +1,16 @@
+Algoritmo para troca de pneu
+1.	Se o carro estiver em movimento, sinalize a manobra para o acostamento da rodovia e encoste o carro.
+2.	Acione o pisca-alerta do carro, retire o cinto de segurança, abra a porta do veículo e dirija-se ao porta-malas.
+3.	Pegue o triângulo de sinalização e coloque a 10 metros atras do carro, para que os condutores que estiverem vindo na rodovia saibam que devem reduzir a velocidade.
+4.	Retire o estepe, o macaco e a chave de rodas do porta malas.
+5.	Posicione o macaco no local indicado abaixo da coluna do carro, lembre-se que deve ser próximo ao pneu que está furado.
+6.	Agora pegue a chave de roda e afrouxe todos os parafusos do pneu furado, em seguida erga o carro acionando o macaco até que o pneu não encoste mais no chão
+7.	Acabe de retirar todos os parafusos e retire o pneu furado.
+8.	Em seguida, pegue o estepe e coloque no lugar do pneu que estava furado e coloque os parafusos de maneira que estes peguem a rosca.
+9.	Agora abaixe o macaco ate que o pneu encoste ao chão.
+10.	Pegue novamente a chave de rodas, aperte todos os parafusos para que a roda fique firme e não se solte ao andar com o carro.
+11.	Va até o porta-malas do carro, guarde o pneu furado no mesmo local que ficava o estepe, junto cm ele guarde a chave de rodas e o macaco (exatamente onde estavam).
+12.	Agora retire o triângulo de sinalização da rodovia e guarde-o novamente no porta-malas.
+13.	Feche o porta-malas, vá até a porta do motorista, abra a porta e entre no carro.
+14.	Feche novamente a porta, coloque o cinto de segurança, de partida no carro e desligue o pisca-alerta.
+15.	Agora sinalize a manobra para voltar a rodovia, certifique-se que não há veículos vindo na pista, realize a conversão para a rodovia e siga sua viagem novamente.

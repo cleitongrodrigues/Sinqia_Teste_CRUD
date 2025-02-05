@@ -1,7 +1,7 @@
 -- 1 Criar um comando SELECT que retorne APENAS o nome dos clientes da cidade “TUPA”. Utilizar o EXISTS para realizar a condição. 
 SELECT 
         C.Nome_Cliente,
-		CI.Nome_Cidade
+	CI.Nome_Cidade
 FROM
         dbo.Clientes C
 INNER   JOIN
