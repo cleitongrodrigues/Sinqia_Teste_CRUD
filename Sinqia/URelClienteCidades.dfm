@@ -178,7 +178,7 @@ object frmRelClientesCidades: TfrmRelClientesCidades
     end
     object edtCodigoCidadeFinal: TEdit
       Left = 158
-      Top = 66
+      Top = 65
       Width = 145
       Height = 24
       TabOrder = 1

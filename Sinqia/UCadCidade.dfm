@@ -803,7 +803,7 @@ object frmCadCidade: TfrmCadCidade
   object btnConsulta: TBitBtn
     Left = 16
     Top = 272
-    Width = 205
+    Width = 209
     Height = 49
     Caption = 'Consultar Cidades'
     Font.Charset = DEFAULT_CHARSET
