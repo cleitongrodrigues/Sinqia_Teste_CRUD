@@ -4,9 +4,10 @@ object DM: TDM
   Width = 793
   object Conexao: TADOConnection
     CommandTimeout = 120
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=SINQIA_CRUD;Data Source=DESKTOP-C54NB6O'
+      'fo=False;Initial Catalog=SINQIA_CRUD;Data Source=DESKTOP-M5F6K7S'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 24

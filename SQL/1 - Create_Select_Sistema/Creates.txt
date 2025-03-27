@@ -16,6 +16,8 @@ IF	OBJECT_ID	('dbo.Cidades')          IS	NULL
      PRINT 'ERRO, A TABELA JA EXISTE NO BANCO DE DADOS'
    END
 
+	------------------------------------------------------------------------------------------
+
 IF	OBJECT_ID	('dbo.Clientes')	IS	NULL
 	BEGIN
 		CREATE	TABLE	dbo.Clientes(
